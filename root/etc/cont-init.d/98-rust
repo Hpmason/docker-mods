@@ -1,0 +1,13 @@
+#!/usr/bin/with-contenv bash
+
+echo "**** installing rust dev environment ****"
+
+# Determine if setup is needed
+if [ ! -f $HOME/.cargo ] 
+then
+  echo "Rust not installed, installing it now"
+  apt-get install --no-install-recommends -y curl gcc
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+else then
+  echo "Rust already installed"
+fi

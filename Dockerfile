@@ -1,6 +1,6 @@
 FROM scratch
 
-LABEL maintainer="username"
+LABEL maintainer="Hpmason"
 
 # copy local files
 COPY root/ /
